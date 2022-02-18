@@ -48,7 +48,14 @@ namespace PatientRecordApplication
             while (pat.PatNum != END)
             {
                 Console.Write("Enter last name >> ");
-                pat.Name = Console.ReadLine();
+                try
+                {
+                    pat.Name = Console.ReadLine();
+                }
+                catch (Exception)
+                {
+                    Console.Write("Exception thrown");
+                }
                 Console.Write("Enter balance >> ");
                 try //Looks for format exception error
                 {
